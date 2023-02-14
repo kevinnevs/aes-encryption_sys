@@ -1,22 +1,23 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
+import logo from './logo.svg';
+import './App.css';
+import { Login } from "./Login";
+import { Register } from "./Register";
 
-function FileInput() {
-  const [selectedFile, setSelectedFile] = useState(null);
+function App() {
+  const [currentForm, setCurrentForm] = useState('login');
 
-  const handleFileChange = (event) => {
-    setSelectedFile(event.target.files[0]);
-  };
+  const toggleForm = (formName) => {
+    setCurrentForm(formName);
+  }
 
   return (
-    <div className='file-input'>
-      <input type="file" onChange={handleFileChange} />
-      {selectedFile ? (
-        <p>{selectedFile.name}</p>
-      ) : (
-        <p>No file selected</p>
-      )}
+    <div className="App">
+      {
+        currentForm === "login" ? <Login onFormSwitch={toggleForm} /> : <Register onFormSwitch={toggleForm} />
+      }
     </div>
   );
 }
 
-export default FileInput;
+export default App;
