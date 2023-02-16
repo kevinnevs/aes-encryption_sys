@@ -19,4 +19,4 @@ function FileInput() {
   );
 }
 
-export default FileInput;
+export default App;
