@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <h1>AES IMAGE ENCRYPTION SYSTEM</h1>
+    <title>File Encryption</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="encrypt.css">
+  </head>
+  <body>
+    <form>
+      <h2>File Encryption</h2>
+      <label for="file">Choose a file to encrypt:</label>
+      <input type="file" id="file" name="file" required>
+      <label for="password">Encryption Password:</label>
+      <input type="password" id="password" name="password" required>
+      <input type="submit" value="Encrypt" onclick="encryptFile(event)">
+    </form>
+
+    <script>
+      function encryptFile(event) {
+        event.preventDefault();
+
+        const file = document.getElementById("file").files[0];
+        const password = document.getElementById("password").value;
+        const reader = new FileReader();
+
+        reader.onload = function(event) {
+          const content = event.target.result;
+          const encrypted = CryptoJS.AES.encrypt(content, password);
+          downloadFile(encrypted, file.name);
+        }
+
+        reader.readAsText(file);
+      }
+
+      function downloadFile(content, filename) {
+        const element = document.createElement("a");
+        element.setAttribute("href", "data:text/plain;charset=utf-8," + encodeURIComponent(content));
+        element.setAttribute("download", filename + ".enc");
+        element.style.display = "none";
+        document.body.appendChild(element);
+        element.click();
+        document.body.removeChild(element);
+      }
+    </script>
+  </body>
+</html>

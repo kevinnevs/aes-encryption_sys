@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>File Decryptor</title>
+    <link rel="stylesheet" type="text/css" href="decrypt.css">
+  </head>
+  <body>
+    <div class="container">
+      <h1>File Decryptor</h1>
+      <form>
+        <label for="encrypted-file">Select an encrypted file to decrypt:</label>
+        <input type="file" id="encrypted-file" accept=".enc">
+        <label for="password">Enter the decryption password:</label>
+        <input type="password" id="password">
+        <button id="decrypt-btn">Decrypt</button>
+        <p class="error" id="error"></p>
+      </form>
+    </div>
+    <script>
+      const decryptBtn = document.getElementById('decrypt-btn');
+      const encryptedFileInput = document.getElementById('encrypted-file');
+      const passwordInput = document.getElementById('password');
+      const errorElem = document.getElementById('error');
+      
+      decryptBtn.addEventListener('click', () => {
+        // Validate that a file and password have been provided
+        if (!encryptedFileInput.value) {
+          showError('Please select an encrypted file to decrypt.');
+          return;
+        }
+        if (!passwordInput.value) {
+          showError('Please enter the decryption password.');
+          return;
+        }
+        
+        // Decrypt the file using the backend API
+        // ...
+        
+        // Display the decrypted file to the user
+        // ...
+      });
+      
+      function showError(errorMessage) {
+        errorElem.innerText = errorMessage;
+      }
+    </script>
+  </body>
+</html>
