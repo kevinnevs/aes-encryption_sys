@@ -13,7 +13,8 @@ def decrypt_file():
     decryption_key = request.form['key']
 
     """Verify the decryption key"""
-    """ ... """
+    if not decryption_key:
+        abort(400, "Not a valid key")
 
     """Decrypt the file"""
     cipher = AES.new(decryption_key, AES.MODE_EAX, nonce=nonce)
