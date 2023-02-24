@@ -8,8 +8,17 @@
 </head>
 
 <body>
+  <header>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="encrypt.html">Encrypt</a>
+      <a href="decrypt.html">Decrypt</a>
+    </nav>
+    <a href="login.html">Log Out</a>
+  </header>
   <div class="container">
-    <h1>File Decryptor</h1>
+    <h1>AES IMAGE ENCRYPTION SYSTEM</h1>
+    <h2>File Decryptor</h2>
     <form>
       <label for="encrypted-file">Select an encrypted file to decrypt:</label>
       <input type="file" id="encrypted-file" accept=".enc">
@@ -43,7 +52,7 @@
           const form_Data = new FormData();
           formData.append('file', encryptedFile);
           formData.append('password', passwordInput.value);
-          const response1 = await fetch('/decrypt', {
+          const response1 = await fetch('/decrypt_api', {
             method: 'POST',
             body: formData
           });
