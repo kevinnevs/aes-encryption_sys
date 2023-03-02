@@ -6,9 +6,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="registration.css">
+    <script src="validation.js" defer></script>
   </head>
   <body>
-    <form action="/register" method="post">
+    <form action="process-registration.php" method="post" id="signup" novalidate>
       <h2>Register</h2>
       <label for="username">Username:</label>
       <input type="text" id="username" name="username" required>
@@ -20,5 +21,6 @@
       <input type="password" id="confirm-password" name="confirm-password" required>
       <input type="submit" value="Submit">
     </form>
+    <p>Already have an account, <a href="login.php">Log in</a></p>
   </body>
 </html>
