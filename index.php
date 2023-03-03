@@ -40,11 +40,11 @@ if (isset($_SESSION["user_id"])) {
   <body>
     <header>
       <nav>
-        <a href="index.html">Home</a>
+        <a href="index.php">Home</a>
         <a href="encrypt.html">Encrypt</a>
         <a href="decrypt.html">Decrypt</a>
       </nav>
-      <a href="login.html">Log Out</a>
+      <a href="login.php">Log Out</a>
     </header>
     <?php if (isset($user)): ?>
         
