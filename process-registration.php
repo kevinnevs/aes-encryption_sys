@@ -35,7 +35,7 @@ if ( ! $stmt->prepare($sql)) {
 
 $stmt->bind_param("sss",
                   $_POST["username"],
-                  $password,
+                  $password_hash,
                   $_POST["email"]);
                   
 if ($stmt->execute()) {
