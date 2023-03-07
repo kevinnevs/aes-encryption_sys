@@ -95,7 +95,7 @@ Decryption Javascript code:
 * [PHP MySQL Extenstion](https://www.cherryservers.com/blog/how-to-install-linux-apache-mysql-and-php-lamp-stack-on-ubuntu-20-04#install-mysql)
 
 2. Ensure you have created a DATABASE. You can use the following MySQL commands to do so:
-CREATE DATABASE `<databasename>`;
+{CREATE DATABASE `<databasename>`;
 USE `<databasename>`;
 
 CREATE TABLE `users` (
@@ -106,7 +106,7 @@ CREATE TABLE `users` (
   PRIMARY KEY (`id`)
 );
 
-GRANT ALL PRIVILEGES ON `<databasename>`.* TO '<username>'@'localhost' IDENTIFIED BY 'mypassword';
+GRANT ALL PRIVILEGES ON `<databasename>`.* TO '<username>'@'localhost' IDENTIFIED BY 'mypassword';}
 
 3. Ensure that the Apache server is running. To do so, run the below command on the terminal.
 sudo systemctl apache2 status
