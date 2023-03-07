@@ -111,18 +111,23 @@ CREATE TABLE `users` (
 GRANT ALL PRIVILEGES ON `<databasename>`.* TO '<username>'@'localhost' IDENTIFIED BY 'mypassword';
 
 3. Ensure that the Apache server is running. To do so, run the below command on the terminal.
+
 sudo systemctl apache2 status
 
 If it's running. Just run the below command to start it.
+
 sudo systemctl apache2 start
 
 4. Once everything is installed and the Apache server is running. Navigate to the following directory
+
 cd /var/www/
 
 Then clone this repository using this command
+
 git clone https://github.com/kevinnebs/aes-encryption_sys.git
 
 5. Once the repository is downloaded. Navigate to the following directory and file
+
 cd /etc/apache2/sites-enabled
 
 Modify the file '000-default.conf' and change the 'DocumentRoot' section to "/var/www/aes-encryption_sys/"
@@ -150,6 +155,7 @@ You can look at this [page](https://codebriefly.com/how-to-setup-apache-php-mysq
 
 4. Proceed and create the database, with the table 'Users' having the 'id','username','email', and 'password' present.
    Or use the below mysql commands:
+   
    CREATE DATABASE `<databasename>`;
 
    CREATE TABLE `users` (
