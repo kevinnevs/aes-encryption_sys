@@ -24,7 +24,7 @@ Decryption Algorithm
 ## Encryption Code Snippet
 Encryption Javascript base code:
 
-<script>
+{javascript} {<script>
      function encryptFile(event) {
        event.preventDefault();
 
@@ -51,10 +51,11 @@ Encryption Javascript base code:
        document.body.removeChild(element);
      }
    </script>
+}
 
 Decryption Javascript code:
 
-<script>
+{javascript} {<script>
      function decryptFile(event) {
        event.preventDefault();
 
@@ -81,6 +82,7 @@ Decryption Javascript code:
        document.body.removeChild(element);
      }
 </script>
+}
 
 ## Installation and Usage
 
