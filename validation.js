@@ -1,3 +1,7 @@
+/* This JS script further validates whether the email and password
+provided. It checks if the email is present, if the name is present 
+& password as well, and also whether the email provided has been taken or not */
+
 const validation = new JustValidate("#signup");
 
 validation

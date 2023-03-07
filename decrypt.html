@@ -1,3 +1,6 @@
+<!---
+This is a decypt html web page. This aids the user to decrypt the already encrypted image.
+-->
 <!DOCTYPE html>
 <html>
   <head>
@@ -5,6 +8,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js"></script>
+    <!--The CSS style sheet -->
     <style>
       body {
         font-family: Arial, sans-serif;
@@ -50,6 +54,7 @@
   </head>
   <body>
     <header>
+      <!--The navigation links for the different sections of the web applications -->
       <nav>
         <a href="index.php">Home</a>
         <a href="encrypt.html">Encrypt</a>
@@ -65,7 +70,9 @@
       <input type="password" id="password" name="password" required>
       <input type="submit" value="Decrypt" onclick="decryptFile(event)">
     </form>
-
+    <!--This is the decrypt algorithm, written in Javascript.
+    It uses the CryptoJS.AES.decrypt library to workout the process.  
+    -->
     <script>
       function decryptFile(event) {
         event.preventDefault();

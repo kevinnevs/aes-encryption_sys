@@ -1,3 +1,11 @@
+<!-- This PHP script gets to validate the following registration process :
+1. Validating if the email address has been provided.
+2. Validating the password provided has at least 8 characters.
+3. Validating the password provided contains at least one letter.
+4. Validating the password must containt at least one number.
+5. Validating the confirmation password section matches the inital password provided.
+After validating the credential, it inserts the information to the database.
+-->
 <?php
 
 if ( ! filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)) {
@@ -51,3 +59,4 @@ if ($stmt->execute()) {
         die($mysqli->error . " " . $mysqli->errno);
     }
 }
+?>

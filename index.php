@@ -1,3 +1,4 @@
+<!-- This PHP script is use to manage the sessions for the logged in user -->
 <?php
 
 session_start();
@@ -16,6 +17,9 @@ if (isset($_SESSION["user_id"])) {
 
 ?>
 
+<!---
+This is an index/home page, when a user logs in. They are directed to this page.
+-->
 <!DOCTYPE html>
 <html>
   <head>
@@ -23,6 +27,7 @@ if (isset($_SESSION["user_id"])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+     <!--The CSS style sheet -->
     <style>
      header {
         background-color: #333;
@@ -39,6 +44,7 @@ if (isset($_SESSION["user_id"])) {
   </head>
   <body>
     <header>
+   <!--The navigation links for the different sections of the web applications -->
       <nav>
         <a href="index.php">Home</a>
         <a href="encrypt.html">Encrypt</a>
@@ -46,6 +52,7 @@ if (isset($_SESSION["user_id"])) {
       </nav>
       <a href="login.php">Log Out</a>
     </header>
+  <!-- This PHP Script enables the logged in user to log out of their session -->
     <?php if (isset($user)): ?>
         
         <p>Hello <?= htmlspecialchars($user["name"]) ?></p>

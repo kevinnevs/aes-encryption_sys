@@ -1,3 +1,7 @@
+<!-- This PHP script enables the filled in credentials on the login form to be posted to the Database.
+Then the if...else logic enables to further authenticate whether the provided email & password is correct.
+From the already registered users.
+-->
 <?php
 
 $is_invalid = false;
@@ -33,6 +37,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 }
 
 ?>
+
+<!-- The login form. This enables the user to type in their email and password credentials -->
 <!DOCTYPE html>
 <html>
 <head>
@@ -45,7 +51,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 <body>
     
     <h1>Login</h1>
-    
+    <!-- The login to display that an invalid login has happened, with the provided credentials -->
     <?php if ($is_invalid): ?>
         <em>Invalid login</em>
     <?php endif; ?>
