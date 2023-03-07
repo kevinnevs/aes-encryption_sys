@@ -24,8 +24,8 @@ Decryption Algorithm
 ## Encryption Code Snippet
 Encryption Javascript base code:
 
-{ <script>
-     function encryptFile(event)
+{javascript} {<script>
+     function encryptFile(event) {
        event.preventDefault();
 
        const file = document.getElementById("file").files[0];
@@ -49,7 +49,9 @@ Encryption Javascript base code:
        document.body.appendChild(element);
        element.click();
        document.body.removeChild(element);
-   </script> }
+     }
+   </script>
+}
 
 Decryption Javascript code:
 
