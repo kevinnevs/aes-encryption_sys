@@ -84,8 +84,15 @@ Decryption Javascript code:
 </script>
 }
 
+## LIVE DEMO
+
+Try encrypting an image :- https://kevinnevs.github.io/aes-encryption_sys/encrypt.html
+
+Try decrypting an image :- https://kevinnevs.github.io/aes-encryption_sys/decrypt.html
+
 ## Installation and Usage
 
+## To run Locally
 ##### UNIX/Linux
 
 1. Ensure that the following is [installed](https://www.cherryservers.com/blog/how-to-install-linux-apache-mysql-and-php-lamp-stack-on-ubuntu-20-04#install-apache) in the system :
